@@ -1,5 +1,5 @@
 html {
-    background: #ff785a;
+    background: #8f5f55;
 }
 
 html:hover .spider {
@@ -12,8 +12,8 @@ html:hover .spider {
     top: 0;
     left: 30%;
 
-    /* animation */
-    animation: swing 2s infinite;
+    /* adjusted swing duration */
+    animation: swing 0.8s infinite;
     transform-origin: top;
     transition: 1s ease-in-out;
 }
@@ -116,24 +116,61 @@ html:hover .spider {
     margin-left: -30px;
 }
 
-/* animation */
+/* adjusted look animation */
 @keyframes look {
     0%, 40%, 100% {
-        transform: translateX(0); 
+        transform: translateX(100%); 
     }
 
     45%, 95% {
-        transform: translateX(-110%);
+        transform: translateX(-210%);
     }
 }
 
-/* animation */
+/* adjusted swing animation */
 @keyframes swing {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
+	0% {
+		transform: rotate(0);
+		transform-origin: top;
+	}
+    10% {
+		transform: rotate(5deg);
+		transform-origin: top;
+	}
+    20% {
+		transform: rotate(10deg);
+		transform-origin: top;
+	}
+	30% {
+		transform: rotate(15deg);
+		transform-origin: top;
+	}
+    40% {
+		transform: rotate(10deg);
+		transform-origin: top;
+	}
+	50% {
+		transform: rotate(5deg);
+		transform-origin: top;
+	}
+    60% {
+		transform: rotate(0deg);
+		transform-origin: top;
+	}
+	70% {
+		transform: rotate(-5deg);
+		transform-origin: top;
+	}
+    80% {
+		transform: rotate(-10deg);
+		transform-origin: top;
+	}
+    90% {
+		transform: rotate(-5deg);
+		transform-origin: top;
+	}
+	100% {
+		transform: rotate(0);
+		transform-origin: top;
+	}
 }
